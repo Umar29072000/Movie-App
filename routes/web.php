@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', 'AuthController@showLoginForm')->name('login');
+Route::post('/login', 'AuthController@login');
+Route::post('/logout', 'AuthController@logout')->name('logout');
