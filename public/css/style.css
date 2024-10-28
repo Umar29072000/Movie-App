@@ -1,0 +1,287 @@
+/* CSS umum untuk semua halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+header a.favorites-link,
+.logout-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+header a.favorites-link:hover,
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling Form Pencarian */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #555;
+}
+
+/* Styling List Movie */
+#movie-list, #favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.movie-item {
+    width: 200px;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-item a {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.movie-item a:hover {
+    color: #007bff;
+}
+
+/* Styling Detail Movie */
+.movie-detail {
+    text-align: center;
+}
+
+.movie-detail img {
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* Styling Form Login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+/* Pesan sukses */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Pesan error */
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #fdecea;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    padding: 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Styling untuk tombol favorit */
+.favorite-button,
+.remove-favorite-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.favorite-button:hover,
+.remove-favorite-button:hover {
+    background-color: #0056b3;
+}
+
+/* Loader styling */
+#loader p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #movie-list, #favorites-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-form input[type="text"] {
+        width: 200px;
+    }
+}
+
+.alert {
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+}
