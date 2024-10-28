@@ -1,99 +1,96 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDb Movie App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <title>Laravel</title>
+        /* Body and General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+        }
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        .hero h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        /* Button Styling */
+        .hero a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        .hero a:hover {
+            background-color: #555;
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
 
-            .content {
-                text-align: center;
-            }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-            .title {
-                font-size: 84px;
-            }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+    <div class="hero">
+        <h1>Welcome to OMDb Movie App</h1>
+        <p>Explore and discover movies from the OMDb database. Login to start searching and managing your favorite movies.</p>
+        <a href="{{ route('login') }}">Login</a>
+        <a href="{{ route('movies.list') }}">Explore Movies</a>
+    </div>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+    <footer>
+        <p>Developed with Laravel | <a href="https://github.com/Umar29072000" target="_blank">GitHub Repo</a></p>
+    </footer>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+</body>
 </html>
