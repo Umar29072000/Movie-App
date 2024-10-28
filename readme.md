@@ -1,4 +1,4 @@
-# Laravel Online Shope
+# Movie App with OMDb
 # Umar Khoirul Afif
 
 Daftar Isi 
