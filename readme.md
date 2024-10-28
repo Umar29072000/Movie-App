@@ -1,4 +1,4 @@
-# Movie App with OMDb
+# Laravel 5 Movie App with OMDb
 # Umar Khoirul Afif
 
 Daftar Isi 
